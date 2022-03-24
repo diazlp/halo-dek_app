@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Detail Page</title>
+    <%- include('partials/style') %>
+    <style>
+      .container {
+        border: 1px solid black;
+        margin: 30px 15vw;
+      }
+    </style>
+  </head>
+  <body>
+    <%- include('partials/navbar') %>
+
+    <div class="container">
+      <div class="detail-content">
+        <div class="header-detail">
+          <h4>Nama: <em><%= question.User?.Profile?.fullName %></em></h4>
+          <h4>Umur: <em><%= question.User?.Profile?.age %></em></h4>
+          <h4>
+            Jenis Kelamin : <em><%= question.User?.Profile?.gender %></em>
+          </h4>
+
+          <h4 style="text-align: right"><%= question.formatPostedDate() %></h4>
+        </div>
+        <div class="main-detail">
+          <h1><%= question.title %></h1>
+          <h2>Gejala: <em><%= question.symptoms %></em></h2>
+          <h2>Deskripsi: <em><%= question.description %></em></h2>
+        </div>
+        <hr style="margin: 0 4vw" />
+        <div class="prescription-detail">
+          <h1>Anjuran Obat</h1>
+          <h2>Nama Obat: <em> <%= question.Prescription?.name %></em></h2>
+          <h2>Diagnosis: <em><%= question.Prescription?.diagnosis %> </em></h2>
+          <h2>
+            Biaya:
+            <span style="color: #0f0"
+              ><%= question.Prescription?.formatCurrencyToIDR() %></span
+            >
+          </h2>
+          <br />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

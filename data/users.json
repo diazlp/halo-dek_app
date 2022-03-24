@@ -4,14 +4,14 @@
     "username": "bjuschka0",
     "email": "bdimbleby0@wikipedia.org",
     "password": "TpwAiqCj",
-    "role": "patient"
+    "role": "doctor"
   },
   {
     "id": 2,
     "username": "epaffitt1",
     "email": "mpasticznyk1@4shared.com",
     "password": "MPHngwQ",
-    "role": "doctor"
+    "role": "patient"
   },
   {
     "id": 3,
@@ -25,21 +25,21 @@
     "username": "aobispo3",
     "email": "dhairyes3@usgs.gov",
     "password": "KpyOGWtV7ID",
-    "role": "doctor"
+    "role": "patient"
   },
   {
     "id": 5,
     "username": "bmulqueen4",
     "email": "cswitsur4@dyndns.org",
     "password": "mHV97Ip",
-    "role": "doctor"
+    "role": "patient"
   },
   {
     "id": 6,
     "username": "ccheverton5",
     "email": "tluthwood5@dot.gov",
     "password": "YCcqJoR",
-    "role": "doctor"
+    "role": "patient"
   },
   {
     "id": 7,
@@ -53,7 +53,7 @@
     "username": "tpie7",
     "email": "fbovaird7@time.com",
     "password": "8qEEgMx8Jt9o",
-    "role": "doctor"
+    "role": "patient"
   },
   {
     "id": 9,
@@ -67,6 +67,6 @@
     "username": "mkowalski9",
     "email": "avanderwalt9@jiathis.com",
     "password": "Kfio4Wt",
-    "role": "doctor"
+    "role": "patient"
   }
 ]

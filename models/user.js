@@ -1,5 +1,8 @@
 "use strict";
 const { Model } = require("sequelize");
+const bcrypt = require("bcryptjs");
+const salt = bcrypt.genSaltSync(10);
+
 module.exports = (sequelize, DataTypes) => {
   class User extends Model {
     /**
@@ -10,7 +13,13 @@ module.exports = (sequelize, DataTypes) => {
 
     static associate(models) {
       // define association here
-      User.belongsToMany(models.Prescription, { through: "Questions" });
+      // User.hasMany(models.Question, { foreignKey: "UserId" });
+
+      User.belongsToMany(models.Prescription, {
+        through: "Questions",
+        foreignKey: "UserId",
+      });
+      User.hasOne(models.Profile, { foreignKey: "UserId" });
     }
   }
   User.init(
@@ -18,19 +27,44 @@ module.exports = (sequelize, DataTypes) => {
       username: {
         type: DataTypes.STRING,
         allowNull: false,
+        validate: {
+          notEmpty: {
+            msg: "Please enter username!",
+          },
+        },
       },
       email: {
         type: DataTypes.STRING,
         allowNull: false,
         unique: true,
+        validate: {
+          emailValidation(value) {
+            if (!value.trim()) {
+              throw new Error("Please enter email!");
+            } else if (!value.trim().includes("@")) {
+              throw new Error("Format email is not valid");
+            }
+          },
+        },
       },
       password: {
         type: DataTypes.STRING,
         allowNull: false,
+        validate: {
+          notEmpty: {
+            msg: "Please enter password!",
+          },
+        },
       },
       role: DataTypes.STRING,
     },
     {
+      hooks: {
+        beforeCreate: (User) => {
+          User.role = "patient";
+          User.password = bcrypt.hashSync(User.password, salt);
+        },
+      },
       sequelize,
       modelName: "User",
     }

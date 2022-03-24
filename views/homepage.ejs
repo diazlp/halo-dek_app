@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Halodek</title>
+    <%- include('partials/style') %>
+  </head>
+  <body>
+    <%- include('partials/navbar') %>
+    <div class="landing">
+      <a href="/issue/add"
+        ><button class="consult-button">Consult Now</button></a
+      >
+    </div>
+    <div class="container">
+      <form action="/" method="get">
+        <input type="text" name="search" placeholder="Search issue.." />
+      </form>
+      <% questions.forEach((question,i) => { %>
+      <div class="main-content" value="<%= question.id  %>">
+        <div class="question-title">
+          <h1>Question <%= i + 1 %> : <%= question.title %></h1>
+        </div>
+        <div class="patient-detail">
+          Patient: <%= question.User.Profile.fullName.split(" ")[0] %> <br />
+          Age: <%= question.User.Profile.age %> <br />
+        </div>
+      </div>
+      <% }) %>
+    </div>
+
+    <script>
+      const questionTitle = document.querySelectorAll(".question-title");
+
+      questionTitle.forEach((question) => {
+        if (question.innerText.split(":")[1].trim().length >= 40) {
+          question.innerHTML = `
+          <h1>
+            ${question.innerText.split(":")[0]} : ${question.innerText
+            .split(":")[1]
+            .slice(0, 40)}...
+          <h1>`;
+        }
+      });
+
+      const mainContent = document.querySelectorAll(".main-content");
+
+      mainContent.forEach((question) => {
+        question.addEventListener("click", () => {
+          const id = question.getAttribute("value");
+
+          window.location.href = `/issue/${id}/detail`;
+        });
+      });
+    </script>
+  </body>
+</html>

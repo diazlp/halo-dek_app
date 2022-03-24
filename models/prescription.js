@@ -9,7 +9,14 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      Prescription.belongsToMany(models.User, { through: "Questions" });
+      Prescription.belongsToMany(models.User, {
+        through: "Questions",
+        foreignKey: "PrescriptionId",
+      });
+    }
+
+    formatCurrencyToIDR() {
+      return `Rp ${this.cost.toLocaleString("id-ID")},00`;
     }
   }
   Prescription.init(
