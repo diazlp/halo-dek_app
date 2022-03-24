@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "name": "capsaicin ginger",
+    "diagnosis": "S49042A",
+    "cost": "$1.91"
+  },
+  { "id": 2, "name": "oxcarbazepine", "diagnosis": "M87875", "cost": "$6.89" },
+  {
+    "id": 3,
+    "name": "Sodium fluoride",
+    "diagnosis": "W2104XA",
+    "cost": "$3.10"
+  },
+  { "id": 4, "name": "Diazepam", "diagnosis": "T490X1A", "cost": "$3.32" },
+  {
+    "id": 5,
+    "name": "Nicotine Polacrilex",
+    "diagnosis": "T485X5D",
+    "cost": "$7.10"
+  },
+  {
+    "id": 6,
+    "name": "Dextromethorphan",
+    "diagnosis": "T46993D",
+    "cost": "$2.99"
+  },
+  { "id": 7, "name": "Thymus,", "diagnosis": "D3611", "cost": "$6.38" },
+  {
+    "id": 8,
+    "name": "Calendula Officinalis Flowering Top, Silicon Dioxide, and Hypericum Perforatum",
+    "diagnosis": "R071",
+    "cost": "$2.46"
+  },
+  { "id": 9, "name": "ALLANTOIN", "diagnosis": "T85840", "cost": "$9.95" },
+  {
+    "id": 10,
+    "name": "Desipramine Hydrochloride",
+    "diagnosis": "A221",
+    "cost": "$1.74"
+  }
+]
