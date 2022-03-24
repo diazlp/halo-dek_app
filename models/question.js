@@ -28,9 +28,20 @@ module.exports = (sequelize, DataTypes) => {
     {
       title: {
         type: DataTypes.STRING,
-        allowNull: false,
+        validate: {
+          notEmpty: {
+            msg: "Please enter your complaint!",
+          },
+        },
       },
-      symptoms: DataTypes.TEXT,
+      symptoms: {
+        type: DataTypes.STRING,
+        validate: {
+          notEmpty: {
+            msg: "Please enter your symptoms!",
+          },
+        },
+      },
       description: DataTypes.TEXT,
       UserId: {
         type: DataTypes.INTEGER,

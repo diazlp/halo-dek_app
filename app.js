@@ -2,6 +2,7 @@ const express = require("express");
 const app = express();
 const keys = require("./config/keys");
 const stripe = require("stripe")(keys);
+const session = require("express-session");
 
 const router = require("./routes");
 

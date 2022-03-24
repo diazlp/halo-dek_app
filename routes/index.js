@@ -17,11 +17,6 @@ router.get("/", Controller.homepage);
 
 // -- check question by id
 
-// define the about route
-router.get("/about", (req, res) => {
-  res.send("About birds");
-});
-
 router.use("/user", auth);
 router.use("/issue", complaint);
 router.use("/payment", payment);

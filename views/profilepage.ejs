@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Page</title>
+    <%- include('partials/style') %>
+  </head>
+  <body>
+    <%- include('partials/navbar') %>
+
+    <div class="container header">
+      <h1>Register Account in Halodek</h1>
+    </div>
+    <div class="container login-form">
+      <form action="/user/register/<%= UserId %>/profile" method="POST">
+        <label for="fullName">Full Name</label>
+        <input type="text" name="fullName" />
+        <% if (errQuery?.fullName) { %>
+        <span style="color: red"><%= errQuery?.fullName %> </span><br /><br />
+        <% } %>
+
+        <label for="age">Age</label>
+        <input type="number" name="age" /> <% if (errQuery?.age) { %>
+        <span style="color: red"><%= errQuery?.age %> </span><br /><br />
+        <% } %>
+
+        <label for="">Gender</label><br />
+
+        <input type="radio" name="gender" value="Male" />
+        <label for="gender">Male</label>
+
+        <input type="radio" name="gender" value="Female" />
+        <label for="gender">Female</label>
+        <% if (errQuery?.gender) { %>
+        <span style="color: red"><%= errQuery?.gender %> </span><br /><br />
+        <% } %>
+
+        <input type="submit" value="Register" class="register" />
+      </form>
+      <a href="/user/login"
+        ><input type="submit" value="Cancel" class="cancel"
+      /></a>
+    </div>
+  </body>
+</html>

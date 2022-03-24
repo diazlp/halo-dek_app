@@ -141,7 +141,9 @@ class Controller {
   }
 
   static addQuestionForm(req, res) {
-    res.render("add-question");
+    const errQuery = req.query;
+
+    res.render("add-question", { errQuery });
   }
 
   static addQuestion(req, res) {
@@ -158,7 +160,19 @@ class Controller {
         res.redirect("/");
       })
       .catch((err) => {
-        res.send(err);
+        err = err.errors.map(({ path, message, validatorKey }) => ({
+          inputType: path,
+          message,
+          errType: validatorKey,
+        }));
+
+        let errString = ``;
+
+        err.forEach(({ inputType, message }) => {
+          errString += `${inputType}=${message}&`;
+        });
+
+        res.redirect(`/issue/add?${errString}`);
       });
   }
 }

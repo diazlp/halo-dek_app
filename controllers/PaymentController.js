@@ -1,11 +1,11 @@
-class Controller {
+class PaymentController {
   static checkout(req, res) {
-    res.render("checkout");
+    res.render("payment/checkout");
   }
 
   static success(req, res) {
-    res.render("success");
+    res.render("payment/success");
   }
 }
 
-module.exports = Controller;
+module.exports = PaymentController;

@@ -14,15 +14,15 @@
       <h1>Login into Halodek</h1>
     </div>
     <div class="container login-form">
-      <form action="/login">
+      <form action="/user/login" method="POST">
         <label for="username">Username</label>
         <input type="text" name="username" />
 
-        <label for="email">Email</label>
-        <input type="text" name="email" />
-
         <label for="password">Password</label>
         <input type="password" name="password" />
+        <% if (err) { %>
+        <br /><br /><span style="color: red"><%= err %> </span><br /><br />
+        <% } %>
 
         <input type="submit" value="Log In" class="login" />
       </form>

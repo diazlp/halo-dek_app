@@ -30,7 +30,15 @@ module.exports = (sequelize, DataTypes) => {
           },
         },
       },
-      gender: DataTypes.STRING,
+      gender: {
+        type: DataTypes.STRING,
+        allowNull: false,
+        validate: {
+          notNull: {
+            msg: "Gender cannot be null!",
+          },
+        },
+      },
       UserId: DataTypes.INTEGER,
     },
     {
