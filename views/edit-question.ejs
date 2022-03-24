@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Page</title>
+    <%- include('partials/style') %>
+  </head>
+  <body>
+    <%- include('partials/navbar') %>
+
+    <div class="container header">
+      <h1>Consultation Form Edit</h1>
+    </div>
+    <div class="container login-form">
+      <form action="/issue/<%= question.id %>/detail/edit" method="post">
+        <label for="title">Title</label>
+        <input
+          type="text"
+          name="title"
+          placeholder="e.g Help, my back hurt!"
+          value="<%= question.title %>"
+        />
+
+        <label for="symptoms">How are you feeling?</label>
+        <input
+          type="text"
+          name="symptoms"
+          placeholder="My back hurt, head spinning"
+          value="<%= question.symptoms %>"
+        />
+
+        <label for="description">How would you describe your condition?</label>
+        <textarea
+          name="description"
+          rows="10"
+          placeholder="i was walking down the street the other day.. "
+        >
+<%= question.description %>"
+          </textarea
+        >
+
+        <!-- TODO INI MASIH DI HARDCODE -->
+        <label for="UserId">UserId (not Implemented)</label>
+        <input type="number" name="UserId" value="<%= question.User?.id %>" />
+
+        <label for="PrescriptionId">PrescriptionId (not implemented)</label>
+        <input
+          type="number"
+          name="PrescriptionId"
+          value="<%= question.Prescription?.id %>"
+        />
+
+        <input type="submit" value="Edit Question" class="register" />
+      </form>
+      <a href="/issue/<%= question.id %>/detail "
+        ><input type="submit" value="Cancel" class="cancel"
+      /></a>
+    </div>
+  </body>
+</html>

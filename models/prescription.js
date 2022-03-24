@@ -15,8 +15,8 @@ module.exports = (sequelize, DataTypes) => {
       });
     }
 
-    formatCurrencyToIDR() {
-      return `Rp ${this.cost.toLocaleString("id-ID")},00`;
+    static formatCurrencyToIDR(money) {
+      return `Rp ${money.toLocaleString("id-ID")},00`;
     }
   }
   Prescription.init(

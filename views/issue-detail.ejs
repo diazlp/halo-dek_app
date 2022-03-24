@@ -19,7 +19,13 @@
     <div class="container">
       <div class="detail-content">
         <div class="header-detail">
-          <h4>Nama: <em><%= question.User?.Profile?.fullName %></em></h4>
+          <h4>
+            Nama:
+            <em
+              ><%= convertStatus(question.User?.Profile?.fullName,
+              question.User?.Profile?.gender) %></em
+            >
+          </h4>
           <h4>Umur: <em><%= question.User?.Profile?.age %></em></h4>
           <h4>
             Jenis Kelamin : <em><%= question.User?.Profile?.gender %></em>
@@ -40,12 +46,21 @@
           <h2>
             Biaya:
             <span style="color: #0f0"
-              ><%= question.Prescription?.formatCurrencyToIDR() %></span
+              ><%= Prescription.formatCurrencyToIDR(question.Prescription?.cost)
+              %></span
             >
           </h2>
           <br />
         </div>
       </div>
+    </div>
+    <div class="container button">
+      <a href="/issue/<%= question.id %>/detail/edit "
+        ><button>Edit Entry</button></a
+      >
+      <a href="/issue/<%= question.id %>/detail/delete "
+        ><button>Delete Entry</button></a
+      >
     </div>
   </body>
 </html>

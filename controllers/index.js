@@ -1,5 +1,6 @@
 const { User, Question, Prescription, Profile } = require("../models");
 const { Op } = require("sequelize");
+const convertStatus = require("../helpers");
 
 class Controller {
   static checkDatabase(req, res) {
@@ -50,7 +51,6 @@ class Controller {
 
     Question.findAll(options)
       .then((questions) => {
-        // res.send(questions);
         res.render("homepage", { questions });
       })
       .catch((err) => {
@@ -73,7 +73,67 @@ class Controller {
       ],
     })
       .then((question) => {
-        res.render("issue-detail", { question });
+        res.render("issue-detail", { question, Prescription, convertStatus });
+      })
+      .catch((err) => {
+        res.send(err);
+      });
+  }
+
+  static detailFormEdit(req, res) {
+    let id = req.params.id;
+
+    Question.findByPk(id, {
+      include: [
+        {
+          model: User,
+          include: Profile,
+        },
+        {
+          model: Prescription,
+        },
+      ],
+    })
+      .then((question) => {
+        res.render("edit-question", { question });
+      })
+      .catch((err) => {
+        res.send(err);
+      });
+  }
+
+  static detailEdit(req, res) {
+    const { title, symptoms, description, UserId, PrescriptionId } = req.body;
+    const id = req.params.id;
+
+    Question.update(
+      {
+        title,
+        symptoms,
+        description,
+        UserId,
+        PrescriptionId,
+      },
+      {
+        where: {
+          id: id,
+        },
+      }
+    )
+      .then(() => {
+        res.redirect(`/issue/${id}/detail`);
+      })
+      .catch((err) => {
+        res.send(err);
+      });
+  }
+
+  static detailDelete(req, res) {
+    const id = req.params.id;
+
+    Question.destroy({ where: { id: id } })
+      .then(() => {
+        res.redirect("/");
       })
       .catch((err) => {
         res.send(err);

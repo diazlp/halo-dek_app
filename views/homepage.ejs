@@ -14,9 +14,14 @@
         ><button class="consult-button">Consult Now</button></a
       >
     </div>
+
+    <button style="padding: 10px">
+      <a href="/payment/checkout">Stripe</a>
+    </button>
     <div class="container">
-      <form action="/" method="get">
+      <form class="form-search" action="/" method="get">
         <input type="text" name="search" placeholder="Search issue.." />
+        <input class="submit-search" type="submit" value="Search topics" />
       </form>
       <% questions.forEach((question,i) => { %>
       <div class="main-content" value="<%= question.id  %>">
