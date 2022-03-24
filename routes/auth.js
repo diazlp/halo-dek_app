@@ -13,4 +13,6 @@ router.post("/register", AuthController.registerPost);
 router.get("/register/:id/profile", AuthController.profilePage);
 router.post("/register/:id/profile", AuthController.profilePost);
 
+router.get("/logout", AuthController.logout);
+
 module.exports = router;

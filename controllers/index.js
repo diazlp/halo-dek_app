@@ -23,9 +23,27 @@ class Controller {
       });
   }
 
-  static homepage(req, res) {
+  static homepage(req, res, next) {
     const search = req.query.search;
     const user = req.session?.user;
+    const paymentStatus = req.query.redirect_status;
+
+    if (user && paymentStatus) {
+      req.session.user.credits += 1;
+
+      User.update(
+        {
+          credits: req.session.user?.credits,
+        },
+        {
+          where: {
+            username: req.session.user?.username,
+          },
+        }
+      ).then(() => {
+        next();
+      });
+    }
 
     let options = {
       include: [
@@ -148,15 +166,33 @@ class Controller {
       });
   }
 
-  static addQuestionForm(req, res) {
+  static addQuestionForm(req, res, next) {
     const errQuery = req.query;
     const user = req.session?.user;
 
     res.render("add-question", { errQuery, user });
   }
 
-  static addQuestion(req, res) {
+  static addQuestion(req, res, next) {
     const { title, symptoms, description, UserId, PrescriptionId } = req.body;
+    const user = req.session?.user;
+
+    // if (user) {
+    //   req.session.user.credits -= 1;
+
+    //   User.update(
+    //     {
+    //       credits: req.session.user?.credits,
+    //     },
+    //     {
+    //       where: {
+    //         username: req.session.user?.username,
+    //       },
+    //     }
+    //   ).then(() => {
+    //     next();
+    //   });
+    // }
 
     Question.create({
       title,
@@ -166,10 +202,10 @@ class Controller {
       PrescriptionId,
     })
       .then(() => {
-        res.redirect("/");
+        return res.redirect("/");
       })
       .catch((err) => {
-        err = err.errors.map(({ path, message, validatorKey }) => ({
+        err = err.errors?.map(({ path, message, validatorKey }) => ({
           inputType: path,
           message,
           errType: validatorKey,
@@ -181,7 +217,7 @@ class Controller {
           errString += `${inputType}=${message}&`;
         });
 
-        res.redirect(`/issue/add?${errString}`);
+        return res.redirect(`/issue/add?${errString}`);
       });
   }
 }

@@ -1,4 +1,4 @@
-const { User, Question, Prescription, Profile } = require("../models");
+const { User, Profile } = require("../models");
 const bcrypt = require("bcryptjs");
 
 class AuthController {
@@ -101,7 +101,11 @@ class AuthController {
           const isValidPassword = bcrypt.compareSync(password, user.password);
 
           if (isValidPassword) {
-            req.session.user = user.username;
+            req.session.user = {
+              username: user.username,
+              role: user.role,
+              credits: user.credits,
+            };
 
             return res.redirect("/");
           } else {
@@ -119,6 +123,16 @@ class AuthController {
       .catch((err) => {
         res.send(err);
       });
+  }
+
+  static logout(req, res) {
+    req.session.destroy((err) => {
+      if (err) {
+        res.send(err);
+      } else {
+        res.redirect("/");
+      }
+    });
   }
 }
 

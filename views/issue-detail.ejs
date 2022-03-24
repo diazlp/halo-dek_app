@@ -54,6 +54,7 @@
         </div>
       </div>
     </div>
+    <% if (user && user.role === 'admin') { %>
     <div class="container button">
       <a href="/issue/<%= question.id %>/detail/edit "
         ><button>Edit Entry</button></a
@@ -62,5 +63,6 @@
         ><button>Delete Entry</button></a
       >
     </div>
+    <% } %>
   </body>
 </html>

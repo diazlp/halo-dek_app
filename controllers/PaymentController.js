@@ -1,6 +1,8 @@
 class PaymentController {
   static checkout(req, res) {
-    res.render("payment/checkout");
+    const msg = req.query.message;
+
+    res.render("payment/checkout", { msg });
   }
 
   static success(req, res) {

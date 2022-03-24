@@ -142,6 +142,13 @@
         text-decoration: none;
       }
 
+      .err-message {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: red;
+      }
+
       @-webkit-keyframes loading {
         0% {
           -webkit-transform: rotate(0deg);
@@ -179,11 +186,15 @@
       </div>
       <button id="submit">
         <div class="spinner hidden" id="spinner"></div>
-        <span id="button-text">Get 5 Credits</span>
+        <span id="button-text">Get 1 Credit</span>
       </button>
       <div class="test-card">
         <a href="https://stripe.com/docs/testing#cards">Test Card</a>
       </div>
+      <% if (msg) { %>
+      <br /><span class="err-message"><%= msg %> </span>
+
+      <% } %>
       <div id="payment-message" class="hidden"></div>
     </form>
     <%- include('../partials/payment-script') %>

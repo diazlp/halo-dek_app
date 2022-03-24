@@ -5,7 +5,13 @@
   <button><a href="/user/login">Login Account</a></button>
   <% } else { %>
   <button style="padding: 10px">
-    <a href="/payment/checkout">Stripe</a>
+    <a href="/payment/checkout">Add Credits</a>
+  </button>
+  <button style="padding: 10px; background-color: #7cb9e8">
+    <a href="/">Credits: <%= user.credits %> </a>
+  </button>
+  <button style="padding: 10px; background-color: #000">
+    <a href="/user/logout">Logout</a>
   </button>
   <% } %>
 </div>

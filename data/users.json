@@ -18,7 +18,7 @@
   {
     "id": 3,
     "username": "radhea",
-    "email": "12345",
+    "email": "radhea@mail.com",
     "password": "$2a$10$mj73XzWEBsOPogaW/jQHYOXo2vHqsH.lQAH3bCJd8IP2kNlnezbPK",
     "credits": 0,
     "role": "patient"
