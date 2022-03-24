@@ -16,11 +16,12 @@ module.exports = {
 
     let userData = JSON.parse(fs.readFileSync(path, { encoding: "utf-8" }));
 
-    userData = userData.map(({ username, email, password, role }) => ({
+    userData = userData.map(({ username, email, password, role, credits }) => ({
       username,
       email,
       password,
       role,
+      credits,
       createdAt: new Date(),
       updatedAt: new Date(),
     }));

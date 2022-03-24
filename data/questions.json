@@ -1,82 +1,90 @@
 [
   {
     "id": 1,
-    "UserID": 5,
-    "PrescriptionID": 5,
-    "title": "Anal or rectal pain",
-    "symptomps": "Oligohydramnios, unspecified trimester, fetus 3",
-    "description": "Dilation of Right External Carotid Artery with Three Intraluminal Devices, Percutaneous Approach"
+    "UserID": 4,
+    "PrescriptionID": 1,
+    "title": "Anu Dok, mata saya sering kunang-kunang",
+    "symptomps": "Sering ngantuk juga",
+    "description": "Sama kurang uang"
   },
   {
     "id": 2,
-    "UserID": 7,
-    "PrescriptionID": 1,
-    "title": "Other general medical examination for administrative purposes",
-    "symptomps": "Contracture of muscle, other site",
-    "description": "Supplement Left External Carotid Artery with Nonautologous Tissue Substitute, Percutaneous Endoscopic Approach"
+    "UserID": 3,
+    "PrescriptionID": 2,
+    "title": "Sering Merasa Haus",
+    "symptomps": "Sering mual juga",
+    "description": "Semua ini dimulai ketika negara api menyerang"
   },
   {
     "id": 3,
-    "UserID": 7,
-    "PrescriptionID": 1,
-    "title": "Full-thickness skin loss [third degree, not otherwise specified] of eye (with other parts of face, head, and neck)",
-    "symptomps": "Instability of internal left knee prosthesis",
-    "description": "Removal of Infusion Device from Left Lower Extremity, Open Approach"
+    "UserID": 5,
+    "PrescriptionID": 3,
+    "title": "Merasa jauh dari semua orang, hidupku kok gini-gini aja",
+    "symptomps": "Gatau deh, mau nulis aja males",
+    "description": "Kenapa ya dok?"
   },
   {
     "id": 4,
-    "UserID": 5,
+    "UserID": 9,
     "PrescriptionID": 4,
-    "title": "Other unwanted pregnancy",
-    "symptomps": "Underdosing of other general anesthetics, subsequent encounter",
-    "description": "Excision of Lower Artery, Percutaneous Approach"
+    "title": "Dok tolong saya sakit perut",
+    "symptomps": "Kram, sakit-sakit merasa dipukul",
+    "description": "Sakit perut intinya mah"
   },
   {
     "id": 5,
     "UserID": 7,
-    "PrescriptionID": 4,
-    "title": "Intestinal infection due to other anaerobes",
-    "symptomps": "Sedative, hypnotic or anxiolytic use, unspecified with sedative, hypnotic or anxiolytic-induced sexual dysfunction",
-    "description": "Supplement Left Humeral Head with Synthetic Substitute, Percutaneous Approach"
+    "PrescriptionID": 5,
+    "title": "Saya demam, sakit kepala, mual, muntah, ternyata lagi naik halilintar",
+    "symptomps": "Gitulah dok masalah orang kebanyakan duit",
+    "description": "Dokter mau bagi?"
   },
   {
     "id": 6,
-    "UserID": 4,
-    "PrescriptionID": 2,
-    "title": "Diabetes mellitus without mention of complication, type I [juvenile type], not stated as uncontrolled",
-    "symptomps": "Laceration with foreign body of unspecified wrist, initial encounter",
-    "description": "Plaque Radiation of Rectum"
+    "UserID": 8,
+    "PrescriptionID": 6,
+    "title": "Ditinggal nikah, baru putus kerja, Bapak meninggal, hidup melarat, rumah diambil mertua",
+    "symptomps": "Gabisa tidur setiap malem",
+    "description": "Rasanya pengen nempel terus sama belati"
   },
   {
     "id": 7,
-    "UserID": 1,
-    "PrescriptionID": 1,
-    "title": "Other closed skull fracture with subarachnoid, subdural, and extradural hemorrhage, with concussion, unspecified",
-    "symptomps": "Nondisplaced fracture of proximal phalanx of left great toe, initial encounter for open fracture",
-    "description": "Monitoring of Venous Pulse, Peripheral, Open Approach"
+    "UserID": 7,
+    "PrescriptionID": 7,
+    "title": "Pusing tiap malam, kayaknya kurang makan",
+    "symptomps": "Gimana ya dok cara cepet kaya",
+    "description": "aaaaaaaa"
   },
   {
     "id": 8,
-    "UserID": 4,
-    "PrescriptionID": 1,
-    "title": "Osteoarthrosis, localized, primary, shoulder region",
-    "symptomps": "Passenger on bus injured in collision with heavy transport vehicle or bus in nontraffic accident, subsequent encounter",
-    "description": "Supplement Right Ankle Region with Nonautologous Tissue Substitute, Open Approach"
+    "UserID": 5,
+    "PrescriptionID": 8,
+    "title": "Setiap buang air kecil saya mencium bau pizza",
+    "symptomps": "gaada gejala",
+    "description": "Mau di rumah, wc umum, pemakaman ya sama aja dok"
   },
   {
     "id": 9,
-    "UserID": 10,
-    "PrescriptionID": 5,
-    "title": "Allergic rhinitis due to other allergen",
-    "symptomps": "Displaced fracture of head of right radius, sequela",
-    "description": "Introduction of Autologous Somatic Stem Cells into Cranial Cavity and Brain, Open Approach"
+    "UserID": 6,
+    "PrescriptionID": 9,
+    "title": "Anu dok mau beli obat rindu",
+    "symptomps": "tiap malem merasa rindu",
+    "description": "gmn ya dok"
   },
   {
     "id": 10,
-    "UserID": 3,
-    "PrescriptionID": 1,
-    "title": "Unspecified pleural effusion",
-    "symptomps": "Nondisplaced fracture of neck of right talus",
-    "description": "Drainage of Chest Subcutaneous Tissue and Fascia, Open Approach, Diagnostic"
+    "UserID": 10,
+    "PrescriptionID": 10,
+    "title": "Dibenci mertua, pendendam, anak sakit-sakitan, sakit rasanya hati ini~",
+    "symptomps": "Marah, iri, dengki semua mencampur menjadi satu",
+    "description": "Asli gatau harus ngapain"
+  },
+  {
+    "id": 11,
+    "UserID": 1,
+    "PrescriptionID": 5,
+    "title": "Sakit kepala sebelah dan demam",
+    "symptomps": "Sakit kepala sebelah dan demam",
+    "description": "Baru tadi pagi sih dok"
   }
 ]

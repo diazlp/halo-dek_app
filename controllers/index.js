@@ -25,6 +25,7 @@ class Controller {
 
   static homepage(req, res) {
     const search = req.query.search;
+    const user = req.session?.user;
 
     let options = {
       include: [
@@ -51,7 +52,7 @@ class Controller {
 
     Question.findAll(options)
       .then((questions) => {
-        res.render("homepage", { questions });
+        res.render("homepage", { questions, user });
       })
       .catch((err) => {
         res.send(err);
@@ -60,6 +61,7 @@ class Controller {
 
   static detailQuestion(req, res) {
     let id = req.params.id;
+    const user = req.session?.user;
 
     Question.findByPk(id, {
       include: [
@@ -73,7 +75,12 @@ class Controller {
       ],
     })
       .then((question) => {
-        res.render("issue-detail", { question, Prescription, convertStatus });
+        res.render("issue-detail", {
+          question,
+          Prescription,
+          convertStatus,
+          user,
+        });
       })
       .catch((err) => {
         res.send(err);
@@ -82,6 +89,7 @@ class Controller {
 
   static detailFormEdit(req, res) {
     let id = req.params.id;
+    const user = req.session?.user;
 
     Question.findByPk(id, {
       include: [
@@ -95,7 +103,7 @@ class Controller {
       ],
     })
       .then((question) => {
-        res.render("edit-question", { question });
+        res.render("edit-question", { question, user });
       })
       .catch((err) => {
         res.send(err);
@@ -142,8 +150,9 @@ class Controller {
 
   static addQuestionForm(req, res) {
     const errQuery = req.query;
+    const user = req.session?.user;
 
-    res.render("add-question", { errQuery });
+    res.render("add-question", { errQuery, user });
   }
 
   static addQuestion(req, res) {

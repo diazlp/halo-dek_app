@@ -4,8 +4,9 @@ const bcrypt = require("bcryptjs");
 class AuthController {
   static registerPage(req, res) {
     const errQuery = req.query;
+    const user = req.session?.user;
 
-    res.render("registerpage", { errQuery });
+    res.render("registerpage", { errQuery, user });
   }
 
   static registerPost(req, res) {
@@ -45,8 +46,9 @@ class AuthController {
   static profilePage(req, res) {
     const UserId = req.params.id;
     const errQuery = req.query;
+    const user = req.session?.user;
 
-    res.render("profilepage", { UserId, errQuery });
+    res.render("profilepage", { UserId, errQuery, user });
   }
 
   static profilePost(req, res) {
@@ -81,8 +83,9 @@ class AuthController {
 
   static loginPage(req, res) {
     const err = req.query.error;
+    const user = req.session?.user;
 
-    res.render("loginpage", { err });
+    res.render("loginpage", { err, user });
   }
 
   static loginPost(req, res) {
@@ -98,6 +101,8 @@ class AuthController {
           const isValidPassword = bcrypt.compareSync(password, user.password);
 
           if (isValidPassword) {
+            req.session.user = user.username;
+
             return res.redirect("/");
           } else {
             const err = `You entered invalid username/password`;

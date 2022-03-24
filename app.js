@@ -1,13 +1,25 @@
 const express = require("express");
 const app = express();
-const keys = require("./config/keys");
-const stripe = require("stripe")(keys);
+const { stripeKey, secretKey } = require("./config/keys");
+const stripe = require("stripe")(stripeKey);
 const session = require("express-session");
 
 const router = require("./routes");
 
 app.set("view engine", "ejs");
 app.use(express.urlencoded({ extended: true }));
+
+app.use(
+  session({
+    secret: secretKey,
+    resave: false,
+    saveUninitialized: false,
+    cookie: {
+      secure: false,
+      sameSite: true,
+    },
+  })
+);
 
 // app.post("/create-checkout-session", async (req, res) => {
 //   const session = await stripe.checkout.sessions.create({
@@ -47,13 +59,6 @@ app.use(express.urlencoded({ extended: true }));
 //     res.send(err);
 //   }
 // });
-
-const calculateOrderAmount = (items) => {
-  // Replace this constant with a calculation of the order's amount
-  // Calculate the order total on the server to prevent
-  // people from directly manipulating the amount on the client
-  return items;
-};
 
 app.post("/create-payment-intent", async (req, res) => {
   const { items } = req.body;

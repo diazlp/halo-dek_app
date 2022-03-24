@@ -1,42 +1,57 @@
 [
   {
     "id": 1,
-    "name": "capsaicin ginger",
-    "diagnosis": "S49042A",
-    "cost": 20000
+    "name": "Jangan bergadang",
+    "diagnosis": "Kamu itu sering begadang makanya hidup kamu susah",
+    "cost": 1000000
   },
-  { "id": 2, "name": "oxcarbazepine", "diagnosis": "M87875", "cost": 25000 },
+  {
+    "id": 2,
+    "name": "Perbanyak minum air",
+    "diagnosis": "Sering pusing-pusing, bibir pecah-pecah",
+    "cost": 100000
+  },
   {
     "id": 3,
-    "name": "Sodium fluoride",
-    "diagnosis": "W2104XA",
-    "cost": 5000
+    "name": "Perbanyak ibadah",
+    "diagnosis": "Kamu itu kurang ibadah makanya sering stres",
+    "cost": 5000000
   },
-  { "id": 4, "name": "Diazepam", "diagnosis": "T490X1A", "cost": 10000 },
+  { "id": 4, "name": "Diapet", "diagnosis": "Flu? ya diapet", "cost": 1000 },
   {
     "id": 5,
-    "name": "Nicotine Polacrilex",
-    "diagnosis": "T485X5D",
-    "cost": 7500
+    "name": "Panadol",
+    "diagnosis": "Obat mabuk darat",
+    "cost": 3000
   },
   {
     "id": 6,
-    "name": "Dextromethorphan",
-    "diagnosis": "T46993D",
-    "cost": 8000
+    "name": "Coba kamu jalan-jalan biar healing",
+    "diagnosis": "Hidup kamu kurang berkah",
+    "cost": 10000000
   },
-  { "id": 7, "name": "Thymus,", "diagnosis": "D3611", "cost": 18500 },
+  {
+    "id": 7,
+    "name": "Perbanyak duit,",
+    "diagnosis": "Duit kamu kurang",
+    "cost": 18500
+  },
   {
     "id": 8,
-    "name": "Calendula Officinalis Flowering Top, Silicon Dioxide, and Hypericum Perforatum",
-    "diagnosis": "R071",
-    "cost": 15000
+    "name": "Uhm.. maaf sakit kamu aneh",
+    "diagnosis": "Saya aja heran, gratis ya",
+    "cost": 0
   },
-  { "id": 9, "name": "ALLANTOIN", "diagnosis": "T85840", "cost": 3000 },
+  {
+    "id": 9,
+    "name": "Obatnya abis",
+    "diagnosis": "Ya gimana mau sembuh wong obatnya abis",
+    "cost": 100000
+  },
   {
     "id": 10,
-    "name": "Desipramine Hydrochloride",
-    "diagnosis": "A221",
-    "cost": 30000
+    "name": "Racun Sianida",
+    "diagnosis": "Sakit hilang, nyawa melayang~",
+    "cost": 0
   }
 ]

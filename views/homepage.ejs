@@ -8,16 +8,14 @@
     <%- include('partials/style') %>
   </head>
   <body>
-    <%- include('partials/navbar') %>
+    <%- include('partials/navbar', {user:user}) %>
+
     <div class="landing">
       <a href="/issue/add"
         ><button class="consult-button">Consult Now</button></a
       >
     </div>
 
-    <button style="padding: 10px">
-      <a href="/payment/checkout">Stripe</a>
-    </button>
     <div class="container">
       <form class="form-search" action="/" method="get">
         <input type="text" name="search" placeholder="Search issue.." />

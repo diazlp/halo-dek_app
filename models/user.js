@@ -56,11 +56,16 @@ module.exports = (sequelize, DataTypes) => {
         },
       },
       role: DataTypes.STRING,
+      credits: {
+        type: DataTypes.INTEGER,
+        defaultValue: 0,
+      },
     },
     {
       hooks: {
         beforeCreate: (User, options) => {
           User.role = "patient";
+          User.credits = 0;
 
           const salt = bcrypt.genSaltSync(10);
           User.password = bcrypt.hashSync(User.password, salt);

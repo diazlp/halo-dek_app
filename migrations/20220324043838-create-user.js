@@ -20,6 +20,10 @@ module.exports = {
         type: Sequelize.STRING,
         allowNull: false,
       },
+      credits: {
+        type: Sequelize.INTEGER,
+        defaultValue: 0,
+      },
       role: {
         type: Sequelize.STRING,
       },

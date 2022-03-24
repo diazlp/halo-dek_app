@@ -1,72 +1,82 @@
 [
   {
     "id": 1,
-    "username": "bjuschka0",
-    "email": "bdimbleby0@wikipedia.org",
-    "password": "TpwAiqCj",
-    "role": "doctor"
+    "username": "admin",
+    "email": "admin@admin.com",
+    "password": "$2a$10$OFu9xYRKSdt9jfVn6pho7OE3Aj3YG99mHu9obw0pH.fKr6245Uh4u",
+    "credits": 0,
+    "role": "admin"
   },
   {
     "id": 2,
-    "username": "epaffitt1",
-    "email": "mpasticznyk1@4shared.com",
-    "password": "MPHngwQ",
+    "username": "diaz",
+    "email": "diaz@mail.com",
+    "password": "$2a$10$mj73XzWEBsOPogaW/jQHYOXo2vHqsH.lQAH3bCJd8IP2kNlnezbPK",
+    "credits": 0,
     "role": "patient"
   },
   {
     "id": 3,
-    "username": "mstoltz2",
-    "email": "ldalman2@chicagotribune.com",
-    "password": "OoA49P",
+    "username": "radhea",
+    "email": "12345",
+    "password": "$2a$10$mj73XzWEBsOPogaW/jQHYOXo2vHqsH.lQAH3bCJd8IP2kNlnezbPK",
+    "credits": 0,
     "role": "patient"
   },
   {
     "id": 4,
-    "username": "aobispo3",
-    "email": "dhairyes3@usgs.gov",
-    "password": "KpyOGWtV7ID",
+    "username": "ronny",
+    "email": "ronny@mail.com",
+    "password": "$2a$10$mj73XzWEBsOPogaW/jQHYOXo2vHqsH.lQAH3bCJd8IP2kNlnezbPK",
+    "credits": 0,
     "role": "patient"
   },
   {
     "id": 5,
-    "username": "bmulqueen4",
-    "email": "cswitsur4@dyndns.org",
-    "password": "mHV97Ip",
+    "username": "clara",
+    "email": "clara@mail.com",
+    "password": "$2a$10$mj73XzWEBsOPogaW/jQHYOXo2vHqsH.lQAH3bCJd8IP2kNlnezbPK",
+    "credits": 0,
     "role": "patient"
   },
   {
     "id": 6,
-    "username": "ccheverton5",
-    "email": "tluthwood5@dot.gov",
-    "password": "YCcqJoR",
+    "username": "zulkipli",
+    "email": "zulkipli@mail.com",
+    "password": "$2a$10$mj73XzWEBsOPogaW/jQHYOXo2vHqsH.lQAH3bCJd8IP2kNlnezbPK",
+    "credits": 0,
     "role": "patient"
   },
   {
     "id": 7,
-    "username": "gkill6",
-    "email": "kparkey6@vinaora.com",
-    "password": "vvpUB97xxll6",
+    "username": "amira",
+    "email": "amira@mail.com",
+    "password": "$2a$10$mj73XzWEBsOPogaW/jQHYOXo2vHqsH.lQAH3bCJd8IP2kNlnezbPK",
+    "credits": 0,
     "role": "patient"
   },
   {
     "id": 8,
-    "username": "tpie7",
-    "email": "fbovaird7@time.com",
-    "password": "8qEEgMx8Jt9o",
+    "username": "tukangpukul",
+    "email": "tukangpukul@mail.com",
+    "password": "$2a$10$mj73XzWEBsOPogaW/jQHYOXo2vHqsH.lQAH3bCJd8IP2kNlnezbPK",
+    "credits": 0,
     "role": "patient"
   },
   {
     "id": 9,
-    "username": "tklemenz8",
-    "email": "rdeandisie8@imdb.com",
-    "password": "9iUY8Qo2y",
+    "username": "anakapes",
+    "email": "anakapes@mail.com",
+    "password": "$2a$10$mj73XzWEBsOPogaW/jQHYOXo2vHqsH.lQAH3bCJd8IP2kNlnezbPK",
+    "credits": 0,
     "role": "patient"
   },
   {
     "id": 10,
-    "username": "mkowalski9",
-    "email": "avanderwalt9@jiathis.com",
-    "password": "Kfio4Wt",
+    "username": "anjasmara",
+    "email": "anjasmara@mail.com",
+    "password": "$2a$10$mj73XzWEBsOPogaW/jQHYOXo2vHqsH.lQAH3bCJd8IP2kNlnezbPK",
+    "credits": 0,
     "role": "patient"
   }
 ]
