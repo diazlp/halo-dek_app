@@ -1,8 +1,9 @@
 "use strict";
 const fs = require("fs");
+const path = "../data/user.json";
 
 module.exports = {
-  async up(queryInterface, Sequelize) {
+  up(queryInterface, Sequelize) {
     /**
      * Add seed commands here.
      *
@@ -12,14 +13,28 @@ module.exports = {
      *   isBetaMember: false
      * }], {});
      */
+
+    let userData = JSON.parse(fs.readFileSync(path, { encoding: "utf-8" }));
+
+    userData = userData.map(({ username, email, password, role }) => ({
+      username,
+      email,
+      password,
+      role,
+      createdAt: new Date(),
+      updatedAt: new Date(),
+    }));
+
+    return queryInterface.bulkInsert("Users", userData, {});
   },
 
-  async down(queryInterface, Sequelize) {
+  down(queryInterface, Sequelize) {
     /**
      * Add commands to revert seed here.
      *
      * Example:
      * await queryInterface.bulkDelete('People', null, {});
      */
+    return queryInterface.bulkDelete("Users", null, {});
   },
 };

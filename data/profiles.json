@@ -1,10 +1,72 @@
-[{"id":1,"UserID":1,"fullName":"Dolf Pessel","age":28,"gender":"Male"},
-{"id":2,"UserID":2,"fullName":"Larina Breedy","age":24,"gender":"Female"},
-{"id":3,"UserID":3,"fullName":"Zechariah Bichard","age":53,"gender":"Male"},
-{"id":4,"UserID":4,"fullName":"Camey Labet","age":48,"gender":"Male"},
-{"id":5,"UserID":5,"fullName":"Bryon Squirrell","age":58,"gender":"Male"},
-{"id":6,"UserID":6,"fullName":"Frank Kemitt","age":59,"gender":"Male"},
-{"id":7,"UserID":7,"fullName":"Jannel Farley","age":36,"gender":"Female"},
-{"id":8,"UserID":8,"fullName":"Burr Scarsbrook","age":55,"gender":"Male"},
-{"id":9,"UserID":9,"fullName":"Tandy Laurance","age":34,"gender":"Female"},
-{"id":10,"UserID":10,"fullName":"Noach Chesshyre","age":37,"gender":"Male"}]
+[
+  {
+    "id": 1,
+    "UserID": 1,
+    "fullName": "Dolf Pessel",
+    "age": 28,
+    "gender": "Male"
+  },
+  {
+    "id": 2,
+    "UserID": 2,
+    "fullName": "Larina Breedy",
+    "age": 24,
+    "gender": "Female"
+  },
+  {
+    "id": 3,
+    "UserID": 3,
+    "fullName": "Zechariah Bichard",
+    "age": 53,
+    "gender": "Male"
+  },
+  {
+    "id": 4,
+    "UserID": 4,
+    "fullName": "Camey Labet",
+    "age": 48,
+    "gender": "Male"
+  },
+  {
+    "id": 5,
+    "UserID": 5,
+    "fullName": "Bryon Squirrell",
+    "age": 58,
+    "gender": "Male"
+  },
+  {
+    "id": 6,
+    "UserID": 6,
+    "fullName": "Frank Kemitt",
+    "age": 59,
+    "gender": "Male"
+  },
+  {
+    "id": 7,
+    "UserID": 7,
+    "fullName": "Jannel Farley",
+    "age": 36,
+    "gender": "Female"
+  },
+  {
+    "id": 8,
+    "UserID": 8,
+    "fullName": "Burr Scarsbrook",
+    "age": 55,
+    "gender": "Male"
+  },
+  {
+    "id": 9,
+    "UserID": 9,
+    "fullName": "Tandy Laurance",
+    "age": 34,
+    "gender": "Female"
+  },
+  {
+    "id": 10,
+    "UserID": 10,
+    "fullName": "Noach Chesshyre",
+    "age": 37,
+    "gender": "Male"
+  }
+]
