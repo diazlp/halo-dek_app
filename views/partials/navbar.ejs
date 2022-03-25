@@ -4,6 +4,8 @@
   <% if (!user) { %>
   <button><a href="/user/login">Login Account</a></button>
   <% } else { %>
+
+  <p><%= user.username %></p>
   <button style="padding: 10px">
     <a href="/payment/checkout">Add Credits</a>
   </button>
