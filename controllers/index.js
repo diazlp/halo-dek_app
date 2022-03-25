@@ -170,16 +170,27 @@ class Controller {
     const errQuery = req.query;
     const user = req.session?.user;
 
-    res.render("add-question", { errQuery, user });
+    User.findOne({
+      where: {
+        username: user.username
+      }
+    })
+    .then(oneUser => {
+      res.render("add-question", { errQuery, user, oneUser });
+    })
+    .catch(err => {
+      res.send(err)
+    })
+
   }
 
   static addQuestion(req, res, next) {
     const { title, symptoms, description, UserId, PrescriptionId } = req.body;
     const user = req.session?.user;
 
-    // if (user) {
-    //   req.session.user.credits -= 1;
-
+    if (user) {
+      req.session.user.credits -= 1;
+    }
     //   User.update(
     //     {
     //       credits: req.session.user?.credits,
@@ -200,6 +211,18 @@ class Controller {
       description,
       UserId,
       PrescriptionId,
+    })
+      .then(() => {
+        User.update(
+          {
+            credits: req.session.user?.credits,
+          },
+          {
+            where: {
+              username: req.session.user?.username,
+            },
+          }
+        )
     })
       .then(() => {
         return res.redirect("/");
