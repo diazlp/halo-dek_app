@@ -170,7 +170,18 @@ class Controller {
     const errQuery = req.query;
     const user = req.session?.user;
 
-    res.render("add-question", { errQuery, user });
+    User.findOne({
+      where: {
+        username: user.username
+      }
+    })
+    .then(oneUser => {
+      res.render("add-question", { errQuery, user, oneUser });
+    })
+    .catch(err => {
+      res.send(err)
+    })
+
   }
 
   static addQuestion(req, res, next) {
