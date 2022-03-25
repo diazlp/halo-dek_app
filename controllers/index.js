@@ -188,9 +188,9 @@ class Controller {
     const { title, symptoms, description, UserId, PrescriptionId } = req.body;
     const user = req.session?.user;
 
-    // if (user) {
-    //   req.session.user.credits -= 1;
-
+    if (user) {
+      req.session.user.credits -= 1;
+    }
     //   User.update(
     //     {
     //       credits: req.session.user?.credits,
@@ -211,6 +211,18 @@ class Controller {
       description,
       UserId,
       PrescriptionId,
+    })
+      .then(() => {
+        User.update(
+          {
+            credits: req.session.user?.credits,
+          },
+          {
+            where: {
+              username: req.session.user?.username,
+            },
+          }
+        )
     })
       .then(() => {
         return res.redirect("/");
