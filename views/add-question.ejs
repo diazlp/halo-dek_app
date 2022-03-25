@@ -13,7 +13,7 @@
     <div class="container header">
       <h1>Consultation Form</h1>
     </div>
-    <div class="container login-form"> 
+    <div class="container login-form">
       <form action="/issue/add" method="post">
         <label for="title">Title</label>
         <input type="text" name="title" placeholder="e.g Help, my back hurt!" />
@@ -40,15 +40,15 @@
 
         <!-- TODO INI MASIH DI HARDCODE -->
         <% if (oneUser.role === 'admin') {%>
-          <label for="UserId">UserId (admin only)</label>
-          <input type="number" name="UserId" />
-  
-          <label for="PrescriptionId">PrescriptionId (admin only)</label>
-          <input type="number" name="PrescriptionId" />
-          <% } else { %>
-            <input type="hidden" name="UserId" value="<%= oneUser.id %> " />
-            <input type="hidden" name="PrescriptionId" value="1"/>
-        <% } %> 
+        <label for="UserId">UserId (admin only)</label>
+        <input type="number" name="UserId" />
+
+        <label for="PrescriptionId">PrescriptionId (admin only)</label>
+        <input type="number" name="PrescriptionId" />
+        <% } else { %>
+        <input type="hidden" name="UserId" value="<%= oneUser.id - 1 %> " />
+        <input type="hidden" name="PrescriptionId" value="1" />
+        <% } %>
 
         <input type="submit" value="Ask Doctors" class="register" />
       </form>
